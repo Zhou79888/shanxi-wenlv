@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数说山西国庆文旅 · 从“看见”到“留下”</title>
+<meta name="description" content="交互式数据新闻：用可追溯的数据，追问《黑神话：悟空》带来的文化关注与山西国庆文旅表现之间的关系。">
+<meta property="og:title" content="数说山西国庆文旅 · 从“看见”到“留下”">
+<meta property="og:description" content="一次集中涌入的注意力，山西接住了吗？——全部数据可追溯的交互式数据新闻。">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F3ED">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="%23B33A2E"/><text x="32" y="44" font-size="36" text-anchor="middle" fill="%23F6F3ED" font-family="serif" font-weight="bold">晋</text></svg>'>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文</a>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <span class="head-title">数说山西国庆文旅</span>
+    <nav class="head-nav" aria-label="章节导航">
+      <a href="#m1">看见</a><a href="#m2">到访</a><a href="#m3">去向</a><a href="#m4">停留</a><a href="#m5">一年后</a><a href="#method">方法</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <canvas id="ink" aria-hidden="true"></canvas>
+  <img class="hero-art" src="assets/hero-art.jpg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <p class="kicker">交互式数据新闻 · 毕业设计作品</p>
+    <h1>数说山西国庆文旅<span class="seal" aria-hidden="true">数说<br>山西</span></h1>
+    <p class="subtitle">从“看见”到“留下”——国庆游客在山西去了哪里？</p>
+    <p class="byline">数据核验截至 2026-10-17 · 所有定量数据均可点击<span class="byline-badge">来源徽章</span>溯源 · 本作品不使用游戏画面与角色形象</p>
+    <div class="hero-lede">
+      <p>2024 年 8 月，游戏《黑神话：悟空》上线。游戏在全国取景 <span class="num" data-db="b1_national"></span> 处，其中 <span class="num" data-db="b1_shanxi"></span> 处在山西，横跨 <span class="num" data-db="b1_cities"></span> 个地市<sup data-src="b1_shanxi"></sup>。流量涌向表里山河——但“火了”这个词，可能指关注度，可能指到访，也可能指停留与消费，它们是三件不同的事。</p>
+      <p>本作品不预设“山西必然增长”。我们只用可追溯的数据，回答一个问题：</p>
+    </div>
+    <p class="big-question">一次集中涌入的注意力，山西接住了吗？</p>
+    <div class="stat-cards" id="hero-cards"></div>
+    <p class="scroll-hint" aria-hidden="true">向下滚动，逐层拆解 ↓</p>
+  </div>
+</section>
+
+<!-- ============ 模块一 ============ -->
+<section class="module" id="m1">
+  <div class="wrap">
+    <p class="module-no">模块一</p>
+    <h2>被看见：流量从哪里来？</h2>
+    <div class="q-lede reveal"><p>在讨论“接住”之前，先看清引信：游戏带来了什么程度的关注？</p></div>
+
+    <div class="timeline" id="tl-origin"></div>
+
+    <div class="card reveal">
+      <h3>官方报道点名的部分取景地（12 处 · 非完整名单）</h3>
+      <p class="card-note">完整 27 处名单在不同公开报道中并不一致，故本页只呈现省文旅厅官网报道中明确点名的景点，不做补齐、不做估算<sup data-src="b1_sample"></sup>。</p>
+      <div class="chip-box" id="chip-locations"></div>
+    </div>
+
+    <div class="boundary reveal">
+      <p><strong>编辑边界</strong>：取景地属于山西，不等于游客因游戏而来；“取景地合计接待人次”也不等于“游戏新增人次”。本作品只讨论数据上的关联，不做因果归因。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 模块二 ============ -->
+<section class="module alt" id="m2">
+  <div class="wrap">
+    <p class="module-no">模块二</p>
+    <h2>来了多少：2024 国庆的到访总量</h2>
+    <div class="q-lede reveal"><p>首个“悟空国庆”，山西的到访规模是否出现明显变化？</p></div>
+
+    <div class="stat-cards" id="m2-cards"></div>
+
+    <figure class="chart reveal" id="chart-yoy" aria-label="2024年国庆重点监测景区人次与门票收入同比增幅对比"></figure>
+
+    <div class="note reveal">
+      <p><strong>怎么读这两个数</strong>：数据范围为全省 66 个重点监测景区（其中 65 个开放，蟒河景区因道路施工闭园）<sup data-src="a1_open"></sup>；“人次”是接待人次而非独立人数；两个增幅为官方发布的可比口径同比，原文如此引用——由增长率反推上一年基数是不成立的，本页不做。<sup data-src="a1_yoy"></sup></p>
+    </div>
+
+    <h3 class="sub-q">基线对照：+46.90% 里，多少是恢复，多少是新增？</h3>
+    <figure class="chart reveal" id="chart-baseline" aria-label="2023与2024年国庆同口径基线对照及2019年参照"></figure>
+  </div>
+</section>
+
+<!-- ============ 模块三 ============ -->
+<section class="module" id="m3">
+  <div class="wrap">
+    <p class="module-no">模块三</p>
+    <h2>去了哪里：客流落进了谁家？</h2>
+    <div class="q-lede reveal"><p>总量之外更要紧的问题：客流是均匀铺开，还是涌向少数门户？</p></div>
+
+    <h3 class="sub-q">市级分布：11 市真实轮廓（已披露填色，未披露斜线水印）</h3>
+    <figure class="chart reveal" id="chart-map" aria-label="2024年国庆山西省11市游客接待占比示意图，已披露三市按占比填色，其余八市标注未披露"></figure>
+
+    <h3 class="sub-q">已披露三市的精确占比</h3>
+    <figure class="chart reveal" id="chart-cities" aria-label="2024年国庆山西省各市游客接待量占比（已披露部分）"></figure>
+    <div class="gap-card reveal">
+      <p><strong>数据缺口</strong>：其余 8 个地市的接待占比未在发布文本中披露（仅见于原文配图，暂未完成核验）。本页不绘制全省完整排名，也不用部分数据推算整体。</p>
+    </div>
+
+    <h3 class="sub-q">景区层面：接待人数前三的景区</h3>
+    <div class="top3 reveal">
+      <span class="top3-item"><i>1</i>忻州古城</span>
+      <span class="top3-item"><i>2</i>大同古城</span>
+      <span class="top3-item"><i>3</i>平遥古城</span>
+    </div>
+    <p class="sub-note reveal">三座“古城型”景区领跑，是值得追问的现象——但仅凭排名，不足以断言“流量只到顶流”。<sup data-src="a3_top3"></sup></p>
+
+    <h3 class="sub-q">取景地景区与整体市场</h3>
+    <figure class="chart reveal" id="chart-jing" aria-label="游戏取景地涉晋文物景点与全省重点监测景区接待人次对比"></figure>
+    <div class="note reveal">
+      <p><strong>口径提示</strong>：两组数字分属“27 个涉文物景点”与“66 个重点监测景区”两套范围，两者的包含关系官方文本未说明，因此<strong>不可相除、不可得出“取景地占全省 X%”</strong>，只能并列观察。<sup data-src="a4_jing"></sup></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 模块四 ============ -->
+<section class="module alt" id="m4">
+  <div class="wrap">
+    <p class="module-no">模块四</p>
+    <h2>留下与花费：游客停了多久，从哪里来</h2>
+    <div class="q-lede reveal"><p>“打卡即走”还是真正停留？客源结构有没有变化？</p></div>
+
+    <h3 class="sub-q">客源构成</h3>
+    <figure class="chart reveal" id="chart-origin" aria-label="2024年国庆山西省内与省外游客占比"></figure>
+    <p class="sub-note reveal">省外游客占比较上年同期提升 <span class="num" data-db="a7_out_delta"></span> 个百分点<sup data-src="a7_out"></sup>。</p>
+
+    <h3 class="sub-q">停留时长</h3>
+    <figure class="chart reveal" id="chart-stay" aria-label="2024年国庆游客出游时长为1至3天的占比"></figure>
+    <div class="stat-cards" id="m4-cards"></div>
+
+    <div class="gap-card reveal">
+      <p><strong>数据缺口</strong>：官方发布文本可核验部分中未包含“人均花费”及其分项的正文表述（相关数据疑在发布配图中，人工核验未完成）。依据“未核实不上屏”原则，本页不呈现人均花费卡片，也不做推算。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 模块五 ============ -->
+<section class="module" id="m5">
+  <div class="wrap">
+    <p class="module-no">模块五</p>
+    <h2>接住了吗：小城的考卷与一年之后</h2>
+    <div class="q-lede reveal"><p>流量的另一面是压力。一座县城如何作答？一年后的数据又说了什么？</p></div>
+
+    <h3 class="sub-q">案例：隰县小西天的 2024 国庆</h3>
+    <div class="timeline" id="tl-xixiao"></div>
+    <div class="tri-table reveal" role="table" aria-label="措施、证据与结果">
+      <div role="row"><span role="columnheader">措施</span><span role="cell">拓宽延长排队通道 · 免费赠送玉露香梨 · 开放党政机关停车区域 · 警力现场疏导 · 假期后凭购票凭证年底前免门票再游</span></div>
+      <div role="row"><span role="columnheader">证据</span><span role="cell">新华社、央广网等主流媒体公开报道，省文旅厅通报提及“花式宠客”</span></div>
+      <div role="row"><span role="columnheader">结果</span><span role="cell">媒体以“口碑逆转”报道；措施的长期量化效果无公开数据——本页不作“措施有效”的断言</span></div>
+    </div>
+    <p class="xixiao-loop reveal">一年后的 2025 国庆中秋，隰县在高速口起设志愿者、景区门口提供热饮与玉露香梨，暖心服务延续——但公开报道仍未给出可量化的客流/收入对比，闭环止于“服务未断”，不止于“效果可证”。<sup data-src="b3_xixiao"></sup></p>
+
+    <h3 class="sub-q">一年之后：国庆增速对比（2024 vs 2025，均为官方可比口径同比）</h3>
+    <div class="year-toggle reveal" role="tablist" aria-label="年份切换">
+      <button type="button" class="yt-btn on" data-year="2025" role="tab" aria-selected="true">2025 国庆中秋</button>
+      <button type="button" class="yt-btn" data-year="2024" role="tab" aria-selected="false">2024 国庆</button>
+    </div>
+    <div class="stat-cards" id="m5-cards"></div>
+    <div class="platform-strip reveal">
+      <p><strong>平台信号（与官方口径不可互算）</strong>：同程旅行数据显示，假期山西全省酒店预订热度同比增长超 <span class="num" data-db="c1_hotel"></span>%，其中大同超 <span class="num" data-db="c1_datong"></span>%（增幅居全国前列），朔州、忻州均超 <span class="num" data-db="c1_shx"></span>%<sup data-src="c1_hotel"></sup>。</p>
+    </div>
+
+    <div class="open-end reveal">
+      <p>把两组可比口径增速放在一起：<strong>花费增速（<span class="num" data-db="a11_yoy"></span>%）高于人次增速（<span class="num" data-db="a10_yoy"></span>%）</strong>。数据支持一个有条件的判断：山西接住了「省外客源的结构性进入」（省外占比 +<span class="num" data-db="a7_out_delta"></span> 个百分点），也接住了人均花费的相对抬升；但 2025 年人次增速较 2024 年的爆发明显回落，说明「悟空引信」的爆发期已经过去。能否接住下一层——「复访」与「长留」，答案不在本作品的数据里，在 2026、2027 年的国庆通报里。</p>
+    </div>
+
+    <div class="boundary-card reveal" id="m5-2026">
+      <p class="bc-tag">时间边界 · 2026 进行中</p>
+      <p>截至 2026-10-17，省级全域通报尚未检索到。已见数据分属<strong>平台口径</strong>：在线旅游人次日均同比 <strong>+<span class="num" data-db="d1_2026_visitors_yoy"></span>%</strong>、收入日均同比 <strong>+<span class="num" data-db="d1_2026_spend_yoy"></span>%</strong><sup data-src="d1_2026_visitors_yoy"></sup>。</p>
+      <p class="bc-caveat">此为平台报告口径，未含省级全域通报，<strong>不作趋势判断</strong>，仅记录数据到达的时间边界。</p>
+    </div>
+
+    <div class="answer-card reveal">
+      <p class="ac-q">一次集中涌入的注意力，山西接住了吗？</p>
+      <p class="ac-a">接住了<strong>客源</strong>，接住了<strong>花费</strong>；<br>还没接住的是<strong>复访</strong>。</p>
+      <p class="ac-note">——基于 2024—2025 官方可比口径数据的有条件判断</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 方法与局限 ============ -->
+<section class="method" id="method">
+  <div class="wrap">
+    <p class="module-no">页脚</p>
+    <h2>方法与局限：这些数字该怎么读</h2>
+
+    <h3 class="sub-q">三把尺子：本页出现过的三套口径</h3>
+    <div class="caliber-table reveal" role="table">
+      <div role="row"><span role="columnheader">口径</span><span role="columnheader">含义</span><span role="columnheader">本页示例</span></div>
+      <div role="row"><span role="cell">重点监测景区口径</span><span role="cell">省级确定的监测景区范围内的人次与门票收入</span><span role="cell">784.46 万人次（2024）</span></div>
+      <div role="row"><span role="cell">全域专项调研口径</span><span role="cell">通讯运营商与旅游大数据联合实验室测算的全省接待国内游客与总花费</span><span role="cell">4386.40 万人次（2025）</span></div>
+      <div role="row"><span role="cell">平台报告口径</span><span role="cell">OTA 平台基于自有订单/预订的统计，与官方口径不可互算</span><span role="cell">酒店预订热度增幅</span></div>
+    </div>
+
+    <h3 class="sub-q">一个真实的口径陷阱</h3>
+    <div class="trap reveal">
+      <p>2020 年国庆，山西公布全省接待国内旅游者 <span class="num" data-db="b8_2020"></span> 万人次；2025 年国庆中秋，同一指标发布为 <span class="num" data-db="a10_visitors"></span> 万人次。若直接相减，会得出“倒退”的结论——但两个数字的统计口径与假期范围并不可比。<strong>这就是本页所有跨年比较只引用官方“可比口径同比”、不并列绝对值的原因。</strong><sup data-src="b8_2020"></sup></p>
+    </div>
+
+    <h3 class="sub-q">本页未呈现的数据，及原因</h3>
+    <ul class="gap-list reveal">
+      <li><strong>人均花费及分项</strong>：发布文本正文未包含，配图核验未完成——不做推算；</li>
+      <li><strong>其余 8 市接待占比</strong>：未在可核验文本中披露——不绘制全省完整排名；</li>
+      <li><strong>完整 27 处取景地名单</strong>：不同公开报道清单不一致——仅呈现官方报道点名部分；</li>
+      <li><strong>2026 年国庆</strong>：截至 2026-10-17，省级全域通报未检索到，已见数据分属平台与市级口径——不纳入本作品叙事（平台报告显示 2026 年山西在线旅游人次日均同比 +13.1%、收入日均 +3.1%，仅作时间边界记录，不作分析）。</li>
+    </ul>
+
+    <h3 class="sub-q">数据来源清单（检索与核验日期：2026-10-17）</h3>
+    <ol class="src-list reveal" id="src-list"></ol>
+
+    <div class="colophon reveal">
+      <p>本作品为网络与新媒体专业本科毕业设计。数据经逐条核查并区分“官方原始 / 官方转引 / 平台数据 / 媒体报道”四类；本页不使用游戏画面与角色形象；结论保持开放。如发现数据错漏，欢迎指正。</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap"><p>《数说山西国庆文旅》 · 交互式数据新闻 · 2026 · 数据核验截至 2026-10-17</p></div>
+</footer>
+
+<button id="toTop" type="button" aria-label="返回顶部" title="返回顶部">↑</button>
+
+<script src="js/data.js"></script>
+<script src="js/shanxi-map.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
